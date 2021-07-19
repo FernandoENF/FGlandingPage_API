@@ -19,6 +19,7 @@
     <orderEntry type="jdk" jdkName="Python 3.9 (FGlandingPage)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="estudandoDjango" />
+    <orderEntry type="module" module-name="demandSystem" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
