@@ -9,7 +9,7 @@ class Student(models.Model):
     email = models.EmailField(null=False, blank=False)
     telephone = models.CharField(max_length=11, null=False, blank=False)
     recommended_by = models.ForeignKey('self', null=True, blank=False, on_delete=models.SET_NULL, related_name='ref_by')
-    code = models.CharField(max_length=12, blank=True)
+    code = models.CharField(max_length=5, blank=True)
 
     def __str__(self):
         return f"{self.name}-{self.code}"
@@ -19,6 +19,10 @@ class Student(models.Model):
 
     def save(self, *args, **kwargs):
         if self.code == "":
-            code = generate_ref_code()
+            cond = True
+            while cond:
+                code = generate_ref_code()
+                if not Student.objects.all().filter(code=code).exists():
+                    cond = False
             self.code = code
         super().save(*args, **kwargs)
