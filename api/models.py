@@ -7,7 +7,7 @@ from .utils import generate_ref_code
 class Student(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     email = models.EmailField(null=False, blank=False)
-    telephone = models.CharField(max_length=11, null=False, blank=False)
+    telephone = models.CharField(max_length=15, null=False, blank=False)
     recommended_by = models.ForeignKey('self', null=True, blank=False, on_delete=models.SET_NULL, related_name='ref_by')
     code = models.CharField(max_length=5, blank=True)
 
