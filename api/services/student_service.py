@@ -11,6 +11,14 @@ def add_student(student):
                                   recommended_by=student.recommended_by, code=student.code)
 
 
+def check_email(email):
+    try:
+        match = Student.objects.get(email=email)
+    except Student.DoesNotExist:
+        return True
+    return False
+
+
 def check_code(ref_code):
     try:
         student = Student.objects.get(code=ref_code)

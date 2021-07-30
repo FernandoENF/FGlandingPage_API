@@ -19,3 +19,8 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = ('name', 'email', 'telephone', 'code', 'ref_code')
+
+    def validate_email(self, email):
+        if student_service.check_email(email):
+            return email
+        raise serializers.ValidationError('Email ja inscrito!')
