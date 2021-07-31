@@ -46,9 +46,8 @@ Para o gerenciamento administrativo basta acessar a rota "/admin" normalmente e 
 ## Funcionalidades
 
   * Rota "api/alunos/"
-  
-    - Retorna um JSON com todos os alunos cadastrados (GET)
-    - Cadastra um novo aluno, é possível indicar se alguém foi recomendado ao passar o código no campo ref_code (POST)
+    - Retorna um JSON com todos os alunos cadastrados (GET)
+    - Cadastra um novo aluno, é possível indicar se alguém foi recomendado ao passar o código no campo ref_code (POST)
   * Rota "/admin"
     - Gerenciamento administrativo 
 
