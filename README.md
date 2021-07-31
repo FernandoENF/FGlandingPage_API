@@ -33,12 +33,12 @@ A aplicação conta com duas rotas:
 
 Para utilizar a API você faz requisições GET e POST na rota "/api/alunos/".
 O POST deve ser feito com os seguintes campos:
-{
-  "name":
-  "email":
-  "telephone":
-  "ref_code":
-}
+>    {\
+>      "name":\
+>      "email":\
+>      "telephone":\
+>      "ref_code":\
+>    }\
 Todos os campos são obrigatórios, porém no ref_code é possível passar um valor nulo.
 
 Para o gerenciamento administrativo basta acessar a rota "/admin" normalmente e utilizar as credenciais de superusuário.
