@@ -6,9 +6,17 @@
 
 A tecnologia utilizada foi o Django, com as seguintes depêndencias:
 
-* Ruby version  x.x.x
-* Rails version x.x.x
-* ...
+* Django	3.2.5
+* asgiref	3.4.1
+* click	8.0.1
+* colorama	0.4.4
+* django-cors-headers	3.7.0
+* djangorestframework	3.12.4
+* mysqlclient	2.0.3
+* pip	21.1.3
+* pytz	2021.1
+* setuptools	57.2.0
+* sqlparse	0.4.1
 
 ## Introdução
 
