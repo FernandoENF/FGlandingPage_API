@@ -25,6 +25,7 @@ class StudentList(APIView):
                 new_student = student.Student(name=name, email=email, telephone=telephone, code=code,
                                               recommended_by=recommended_by)
                 student_bd = student_service.add_student(new_student)
+                serializer = student_serializer.StudentSerializer(student_bd)
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             else:
                 name = serializer.validated_data["name"]
@@ -35,6 +36,7 @@ class StudentList(APIView):
                 new_student = student.Student(name=name, email=email, telephone=telephone, code=code,
                                               recommended_by=recommended_by)
                 student_bd = student_service.add_student(new_student)
+                serializer = student_serializer.StudentSerializer(student_bd)
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
